@@ -17,14 +17,11 @@
 #include "paddle/phi/kernels/funcs/algorithm.h"
 #include "paddle/phi/kernels/fusion/gpu/cast_with_ptr.h"
 
-backends / iluvatar_gpu / kernels / ernie_core /
-    fused_bias_act_kernel_register.cc
-
-    PD_CUSTOM_KERNEL_REGISTER(distributed_fused_lamb_init,
-                              iluvatar_gpu,
-                              ALL_LAYOUT,
-                              phi::fusion::DistributedFusedLambInitOpKernel,
-                              float) {
+PD_CUSTOM_KERNEL_REGISTER(distributed_fused_lamb_init,
+                          iluvatar_gpu,
+                          ALL_LAYOUT,
+                          phi::fusion::DistributedFusedLambInitOpKernel,
+                          float) {
   kernel->OutputAt(0).SetDataType(phi::DataType::FLOAT32);
   kernel->OutputAt(1).SetDataType(phi::DataType::FLOAT32);
   kernel->OutputAt(2).SetDataType(phi::DataType::FLOAT16);
