@@ -362,6 +362,7 @@ file(
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/shuffle_channel_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/shuffle_channel_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/soft_relu_grad_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/spectral_norm_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/stack_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/stft_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/sync_batch_norm_grad_kernel.cu
