@@ -265,6 +265,7 @@ file(
 file(
   GLOB
   CUDA_SRCS2
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/spectral_norm_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/fusion/gpu/distributed_fused_lamb_init_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/fusion/gpu/fused_bias_dropout_residual_layer_norm_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/fusion/gpu/fused_bias_dropout_residual_layer_norm_kernel.cu
