@@ -128,6 +128,7 @@ file(
   ${PADDLE_SOURCE_DIR}/paddle/phi/backends/dynload/cublas.cc
   ${PADDLE_SOURCE_DIR}/paddle/phi/backends/dynload/cublasLt.cc
   # kernels/gpu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/spectral_norm_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/abs_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/abs_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/activation_kernel.cu
