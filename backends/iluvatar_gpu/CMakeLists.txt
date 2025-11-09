@@ -124,6 +124,7 @@ file(
   ${PADDLE_SOURCE_DIR}/paddle/phi/backends/dynload/cublas.cc
   ${PADDLE_SOURCE_DIR}/paddle/phi/backends/dynload/cublasLt.cc
   # kernels/gpu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/yolo_box_post_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/abs_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/abs_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/activation_kernel.cu
@@ -370,6 +371,9 @@ file(
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/weighted_sample_neighbors_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/yolo_box_head_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/kps/elementwise_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/legacy/gpu/cal_aux_loss_grad_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/legacy/gpu/expand_modality_expert_id_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/legacy/gpu/cal_aux_loss_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/legacy/gpu/fp8_quant_blockwise_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/legacy/gpu/moe_combine_no_weight_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/legacy/kps/compare_kernel.cu

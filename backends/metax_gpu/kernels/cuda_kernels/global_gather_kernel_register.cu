@@ -11,19 +11,21 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
+/ home / aistudio / PaddleCustomDevice / backends / metax_gpu / kernels /
+    cuda_kernels /
+    global_gather_kernel_register.cu
 #include "paddle/phi/core/kernel_registry.h"
-#include "paddle/phi/kernels/gpu/global_gather_kernel.cu"  //NOLINT
+#include "paddle/phi/kernels/gpu/global_gather_kernel.h"
 
-PD_CUSTOM_KERNEL_REGISTER(global_gather,
-                          metax_gpu,
-                          ALL_LAYOUT,
-                          phi::GlobalGatherKernel,
-                          float,
-                          double,
-                          int,
-                          int64_t,
-                          phi::dtype::float16) {
+    PD_CUSTOM_KERNEL_REGISTER(global_gather,
+                              metax_gpu,
+                              ALL_LAYOUT,
+                              phi::GlobalGatherKernel,
+                              float,
+                              double,
+                              int,
+                              int64_t,
+                              phi::dtype::float16) {
   kernel->InputAt(1).SetDataType(phi::DataType::INT64);
   kernel->InputAt(2).SetDataType(phi::DataType::INT64);
 }

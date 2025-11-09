@@ -1,4 +1,4 @@
-// Copyright (c) 2024 PaddlePaddle Authors. All Rights Reserved.
+// Copyright (c) 2025 PaddlePaddle Authors. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,7 +13,15 @@
 // limitations under the License.
 
 #include "paddle/phi/core/kernel_registry.h"
-#include "paddle/phi/kernels/gpu/l1_norm_grad_kernel.h"
+#include "paddle/phi/kernels/gpu/build_src_rank_and_local_expert_id_kernel.h"
 
-PD_CUSTOM_KERNEL_REGISTER(
-    l1_norm_grad, iluvatar_gpu, ALL_LAYOUT, phi::L1NormGradKernel, float) {}
+PD_CUSTOM_KERNEL_REGISTER(build_src_rank_and_local_expert_id,
+                          iluvatar_gpu,
+                          ALL_LAYOUT,
+                          phi::BuildSrcRankAndLocalExpertIdKernel,
+                          float,
+                          double,
+                          int,
+                          int64_t,
+                          phi::dtype::float16,
+                          phi::dtype::bfloat16) {}

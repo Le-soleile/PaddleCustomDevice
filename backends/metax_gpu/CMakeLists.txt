@@ -109,7 +109,7 @@ file(
   ${PADDLE_SOURCE_DIR}/paddle/phi/backends/gpu/cuda/cuda_info.cc
   ${PADDLE_SOURCE_DIR}/paddle/phi/backends/dynload/cuda_driver.cc
   ${PADDLE_SOURCE_DIR}/paddle/phi/backends/gpu/cuda/cuda_graph.cc
-  # Core
+  # Corep
   ${PADDLE_SOURCE_DIR}/paddle/phi/core/enforce.cc
   ${PADDLE_SOURCE_DIR}/paddle/phi/core/mixed_vector.cc
   ${PADDLE_SOURCE_DIR}/paddle/phi/backends/dynload/cusparse.cc
@@ -118,6 +118,23 @@ file(
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/funcs/math/*.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/funcs/eigen/*.cu
   # kernels/gpu
+  paddle/phi/kernels/gpu/yolo_box_post_kernel.cu
+  paddle/phi/kernels/gpu/yolo_box_head_kernel.cu
+  paddle/phi/kernels/gpu/stft_grad_kernel.cu
+  paddle/phi/kernels/gpu/soft_relu_grad_kernel.cu
+  paddle/phi/kernels/gpu/shuffle_channel_kernel.cu
+  paddle/phi/kernels/gpu/shuffle_channel_grad_kernel.cu
+  paddle/phi/kernels/gpu/sequence_expand_kernel.cu
+  paddle/phi/kernels/gpu/seed_kernel.cu
+  paddle/phi/kernels/gpu/row_conv_kernel.cu
+  paddle/phi/kernels/gpu/row_conv_grad_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/partial_send_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/partial_recv_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/partial_concat_grad_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/partial_allgather_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/l1_norm_grad_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/global_scatter_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/global_gather_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/activation_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/activation_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/adamw_kernel.cu

@@ -14,7 +14,7 @@
 
 #include "paddle/phi/core/kernel_registry.h"
 #include "paddle/phi/kernels/gpu/shuffle_channel.h"
-#include "paddle/phi/kernels/gpu/shuffle_channel_grad_kernel.cu"  //NOLINT
+#include "paddle/phi/kernels/gpu/shuffle_channel_grad_kernel.h"
 
 PD_CUSTOM_KERNEL_REGISTER(shuffle_channel_grad,
                           metax_gpu,
