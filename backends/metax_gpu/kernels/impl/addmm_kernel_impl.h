@@ -20,7 +20,7 @@ limitations under the License. */
 #include "glog/logging.h"
 
 #include "paddle/phi/kernels/addmm_kernel.h"
-#include "../funcs/blas/blas.h"
+#include "paddle/phi/kernels/funcs/blas/blas.h"
 #include "paddle/phi/kernels/funcs/eigen/common.h"
 #include "paddle/phi/kernels/funcs/eigen/eigen_function.h"
 // clang-format on
@@ -98,6 +98,7 @@ void AddmmKernel(const Context& dev_ctx,
           y_dims[0]));
 
   dev_ctx.template Alloc<T>(out);
+  if (out->numel() == 0) return;
   auto blas = funcs::GetBlas<Context, T>(dev_ctx);
 
   // calc broadcast dim
