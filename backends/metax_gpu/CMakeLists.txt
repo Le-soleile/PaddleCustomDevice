@@ -120,16 +120,16 @@ file(
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/funcs/math/*.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/funcs/eigen/*.cu
   # kernels/gpu
-  paddle/phi/kernels/gpu/yolo_box_post_kernel.cu
-  paddle/phi/kernels/gpu/yolo_box_head_kernel.cu
-  paddle/phi/kernels/gpu/stft_grad_kernel.cu
-  paddle/phi/kernels/gpu/soft_relu_grad_kernel.cu
-  paddle/phi/kernels/gpu/shuffle_channel_kernel.cu
-  paddle/phi/kernels/gpu/shuffle_channel_grad_kernel.cu
-  paddle/phi/kernels/gpu/sequence_expand_kernel.cu
-  paddle/phi/kernels/gpu/seed_kernel.cu
-  paddle/phi/kernels/gpu/row_conv_kernel.cu
-  paddle/phi/kernels/gpu/row_conv_grad_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/yolo_box_post_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/yolo_box_head_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/stft_grad_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/soft_relu_grad_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/shuffle_channel_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/shuffle_channel_grad_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/sequence_expand_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/seed_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/row_conv_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/row_conv_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/partial_send_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/partial_recv_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/partial_concat_grad_kernel.cu
