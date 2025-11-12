@@ -126,6 +126,7 @@ file(
   ${PADDLE_SOURCE_DIR}/paddle/phi/backends/dynload/cufft.cc
   # kernels/gpu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/spectral_norm_grad_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/spectral_norm_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/abs_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/abs_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/activation_kernel.cu
@@ -149,6 +150,7 @@ file(
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/concat_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/concat_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/contiguous_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/correlation_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/cum_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/cum_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/deformable_conv_grad_kernel.cu
@@ -265,6 +267,12 @@ file(
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/fill_diagonal_tensor_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/gelu_grad_kernel.cu)
 
+foreach(src ${CUDA_SRCS1})
+  if(NOT EXISTS ${src})
+    message(FATAL_ERROR "Missing CUDA source file: ${src}")
+  endif()
+endforeach()
+
 file(
   GLOB
   CUDA_SRCS2
@@ -322,7 +330,6 @@ file(
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/group_norm_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/gru_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/index_add_grad_kernel.cu
-  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/interpolate_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/interpolate_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/kldiv_loss_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/kldiv_loss_kernel.cu
@@ -366,6 +373,7 @@ file(
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/shuffle_channel_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/shuffle_channel_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/soft_relu_grad_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/spectral_norm_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/stack_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/stft_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/sync_batch_norm_grad_kernel.cu
@@ -701,6 +709,8 @@ file(
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/shuffle_batch_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/sigmoid_cross_entropy_with_logits_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/slogdeterminant_grad_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/determinant_grad_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/determinant_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/sparse_momentum_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/straight_through_estimator_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/svd_grad_kernel.cu
@@ -900,6 +910,12 @@ file(
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/legacy/kps/reduce_max_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/array_kernel.cc)
 
+foreach(src ${CUDA_SRCS2})
+  if(NOT EXISTS ${src})
+    message(FATAL_ERROR "Missing CUDA source file: ${src}")
+  endif()
+endforeach()
+
 set(CUDA_SRCS ${CUDA_SRCS1} ${CUDA_SRCS2})
 list(REMOVE_DUPLICATES CUDA_SRCS)
 
@@ -924,7 +940,6 @@ list(
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/huber_loss_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/huber_loss_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/histogram_kernel.cu
-  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/interpolate_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/load_combine_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/load_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/kthvalue_grad_kernel.cu
