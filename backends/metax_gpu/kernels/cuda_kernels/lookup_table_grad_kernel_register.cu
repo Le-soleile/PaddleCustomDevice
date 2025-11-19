@@ -13,7 +13,7 @@
 // limitations under the License.
 
 #include "paddle/phi/core/kernel_registry.h"
-#include "paddle/phi/kernels/gpu/lookup_table_grad_kernel.cu"  //NOLINT
+#include "paddle/phi/kernels/gpu/lookup_table_grad_kernel.h"
 PD_CUSTOM_KERNEL_REGISTER(lookup_table_grad,
                           metax_gpu,
                           ALL_LAYOUT,

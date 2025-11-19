@@ -13,7 +13,7 @@
 // limitations under the License.
 
 #include "paddle/phi/core/kernel_registry.h"
-#include "paddle/phi/kernels/gpu/global_gather_kernel.cu"  //NOLINT
+#include "paddle/phi/kernels/gpu/global_gather_kernel.h"
 
 PD_CUSTOM_KERNEL_REGISTER(global_gather,
                           iluvatar_gpu,
