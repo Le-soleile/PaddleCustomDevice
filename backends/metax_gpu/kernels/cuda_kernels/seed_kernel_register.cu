@@ -14,7 +14,7 @@
 
 #include "paddle/phi/core/kernel_registry.h"
 #include "paddle/phi/kernels/funcs/math_function.h"
-#include "paddle/phi/kernels/gpu/seed_kernel.cu"  //NOLINT
+#include "paddle/phi/kernels/gpu/seed_kernel.h"
 #include "paddle/phi/kernels/impl/seed_kernel_impl.h"
 
 PD_CUSTOM_KERNEL_REGISTER(

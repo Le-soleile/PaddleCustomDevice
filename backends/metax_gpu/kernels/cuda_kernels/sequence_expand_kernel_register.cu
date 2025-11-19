@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include "paddle/phi/kernels/gpu/sequence_expand_kernel.cu"  //NOLINT
+#include "paddle/phi/kernels/gpu/sequence_expand_kernel.h"
 #include "paddle/phi/kernels/impl/sequence_expand_kernel_impl.h"
 
 PD_CUSTOM_KERNEL_REGISTER(sequence_expand,
