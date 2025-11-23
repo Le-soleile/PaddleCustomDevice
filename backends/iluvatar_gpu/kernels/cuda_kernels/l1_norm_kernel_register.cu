@@ -13,7 +13,7 @@
 // limitations under the License.
 
 #include "paddle/phi/core/kernel_registry.h"
-#include "paddle/phi/kernels/gpu/l1_norm_kernel.cu"  // NOLINT
+#include "paddle/phi/kernels/l1_norm_kernel.h"
 
 PD_CUSTOM_KERNEL_REGISTER(
     l1_norm, iluvatar_gpu, ALL_LAYOUT, phi::L1NormKernel, float) {}
