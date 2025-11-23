@@ -13,7 +13,7 @@
 // limitations under the License.
 
 #include "paddle/phi/core/kernel_registry.h"
-#include "paddle/phi/kernels/gpu/complex_kernel.cu"  // NOLINT
+#include "paddle/phi/kernels/complex_kernel.h"
 
 PD_CUSTOM_KERNEL_REGISTER(conj,
                           metax_gpu,

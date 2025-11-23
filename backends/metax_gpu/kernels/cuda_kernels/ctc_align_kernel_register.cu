@@ -1,4 +1,5 @@
-// Copyright (c) 2025 PaddlePaddle Authors. All Rights Reserved.
+ctc_align_kernel  // Copyright (c) 2025 PaddlePaddle Authors. All Rights
+                  // Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,7 +14,7 @@
 // limitations under the License.
 
 #include "paddle/phi/core/kernel_registry.h"
-#include "paddle/phi/kernels/gpu/ctc_align_kernel.cu"  //NOLINT
+#include "paddle/phi/kernels/ctc_align_kernel.h"
 
 PD_CUSTOM_KERNEL_REGISTER(
     ctc_align, metax_gpu, ALL_LAYOUT, phi::CTCAlignOpCUDAKernel, int, int64_t) {
