@@ -14,7 +14,7 @@
 
 #include "paddle/phi/core/kernel_registry.h"
 #include "paddle/phi/kernels/funcs/math_function.h"
-#include "paddle/phi/kernels/gpu/row_conv_kernel.h"
+#include "paddle/phi/kernels/row_conv_kernel.h"
 
 PD_CUSTOM_KERNEL_REGISTER(
     row_conv, metax_gpu, ALL_LAYOUT, phi::RowConvKernel, float) {}
