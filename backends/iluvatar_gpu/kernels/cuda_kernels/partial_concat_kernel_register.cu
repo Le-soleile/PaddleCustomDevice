@@ -24,7 +24,7 @@
 
 #include "paddle/phi/backends/gpu/gpu_context.h"
 #include "paddle/phi/core/kernel_registry.h"
-#include "paddle/phi/kernels/gpu/partial_concat_kernel.cu"  //NOLINT
+#include "paddle/phi/kernels/partial_concat_kernel.h"
 PD_CUSTOM_KERNEL_REGISTER(partial_concat,
                           iluvatar_gpu,
                           ALL_LAYOUT,
