@@ -15,9 +15,5 @@
 #include "paddle/phi/core/kernel_registry.h"
 #include "paddle/phi/kernels/ctc_align_kernel.h"
 
-PD_CUSTOM_KERNEL_REGISTER(ctc_align,
-                          iluvatar_gpu,
-                          ALL_LAYOUT,
-                          phi::CTCAlignOpCUDAKernel,
-                          int,
-                          int64_t) {}
+PD_CUSTOM_KERNEL_REGISTER(
+    ctc_align, iluvatar_gpu, ALL_LAYOUT, phi::CTCAlignKernel, int, int64_t) {}

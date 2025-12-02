@@ -16,5 +16,4 @@
 #include "paddle/phi/kernels/ctc_align_kernel.h"
 
 PD_CUSTOM_KERNEL_REGISTER(
-    ctc_align, metax_gpu, ALL_LAYOUT, phi::CTCAlignOpCUDAKernel, int, int64_t) {
-}
+    ctc_align, metax_gpu, ALL_LAYOUT, phi::CTCAlignKernel, int, int64_t) {}
