@@ -125,6 +125,7 @@ file(
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/funcs/eigen/*.cu
   # kernels/gpu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/ctc_align_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/yolo_box_post_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/spectral_norm_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/spectral_norm_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/activation_kernel.cu
@@ -205,7 +206,9 @@ file(
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/index_add_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/index_put_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/index_put_grad_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/interpolate_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/kldiv_loss_grad_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/kldiv_loss_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/p_norm_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/p_norm_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/pad_kernel.cu
@@ -250,6 +253,8 @@ file(
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/mean_all_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/multiplex_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/multiplex_grad_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/multiclass_nms3_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/mp_allreduce_sum_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/pow2_decay_with_linear_warmup_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/sigmoid_cross_entropy_with_logits_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/top_k_kernel.cu
