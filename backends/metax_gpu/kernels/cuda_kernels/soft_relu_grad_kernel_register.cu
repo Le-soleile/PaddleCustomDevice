@@ -13,7 +13,7 @@
 // limitations under the License.
 
 #include "paddle/phi/core/kernel_registry.h"
-#include "paddle/phi/kernels/gpu/soft_relu_grad_kernel.h"
+#include "paddle/phi/kernels/soft_relu_grad_kernel.h"
 
 PD_CUSTOM_KERNEL_REGISTER(soft_relu_grad,
                           metax_gpu,
