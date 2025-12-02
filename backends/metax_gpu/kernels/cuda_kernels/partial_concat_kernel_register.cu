@@ -28,7 +28,7 @@
 PD_CUSTOM_KERNEL_REGISTER(partial_concat,
                           metax_gpu,
                           ALL_LAYOUT,
-                          phi::PartialConcatOpCUDAKernel,
+                          phi::PartialConcatKernel,
                           float,
                           double,
                           int,
