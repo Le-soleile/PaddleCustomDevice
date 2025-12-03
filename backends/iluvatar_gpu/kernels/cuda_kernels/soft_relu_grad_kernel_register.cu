@@ -18,7 +18,7 @@
 PD_CUSTOM_KERNEL_REGISTER(soft_relu_grad,
                           iluvatar_gpu,
                           ALL_LAYOUT,
-                          phi::SoftReluGradCudaKernel,
+                          phi::SoftReluGradKernel,
                           float,
                           double,
                           phi::dtype::float16,
