@@ -13,7 +13,7 @@
 // limitations under the License.
 
 #include "paddle/phi/core/kernel_registry.h"
-#include "paddle/phi/kernels/gpu/roi_align_grad_kernel.cu"  // NOLINT
+#include "paddle/phi/kernels/roi_align_grad_kernel.h"
 
 PD_CUSTOM_KERNEL_REGISTER(
     roi_align_grad, iluvatar_gpu, ALL_LAYOUT, phi::RoiAlignGradKernel, float) {}

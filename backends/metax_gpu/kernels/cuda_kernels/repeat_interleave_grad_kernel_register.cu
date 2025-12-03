@@ -13,7 +13,7 @@
 // limitations under the License.
 
 #include "paddle/phi/core/kernel_registry.h"
-#include "paddle/phi/kernels/gpu/repeat_interleave_grad_kernel.cu"  // NOLINT
+#include "paddle/phi/kernels/repeat_interleave_grad_kernel.h"
 
 PD_CUSTOM_KERNEL_REGISTER(repeat_interleave_with_tensor_index_grad,
                           metax_gpu,
