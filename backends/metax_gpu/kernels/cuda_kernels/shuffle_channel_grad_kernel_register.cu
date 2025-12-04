@@ -13,7 +13,6 @@
 // limitations under the License.
 
 #include "paddle/phi/core/kernel_registry.h"
-#include "paddle/phi/kernels/shuffle_channel.h"
 #include "paddle/phi/kernels/shuffle_channel_grad_kernel.h"
 
 PD_CUSTOM_KERNEL_REGISTER(shuffle_channel_grad,
