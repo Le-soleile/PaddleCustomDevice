@@ -124,11 +124,10 @@ file(
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/funcs/math/*.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/funcs/eigen/*.cu
   # kernels/gpu
-  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/lookup_table_kernel.cu
-  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/lookup_table_grad_kernel.cu
-  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/l1_norm_grad_kernel.cu
-  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/global_scatter_kernel.cu
-  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/global_gather_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/yolo_box_head_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/stft_grad_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/soft_relu_grad_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/shuffle_channel_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/lgamma_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/lamb_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/label_smooth_kernel.cu
@@ -145,6 +144,7 @@ file(
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/abs_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/add_n_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/arange_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/argsort_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/adadelta_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/accuracy_check_kernel.cu
   # ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/accuracy_kernel.cu
