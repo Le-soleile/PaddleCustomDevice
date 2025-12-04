@@ -129,6 +129,11 @@ file(
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/seed_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/row_conv_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/row_conv_grad_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/lgamma_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/lamb_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/label_smooth_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/label_smooth_grad_kernel.cu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/l1_norm_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/yolo_box_post_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/spectral_norm_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/spectral_norm_kernel.cu
