@@ -1,4 +1,4 @@
-// Copyright (c) 2025 PaddlePaddle Authors. All Rights Reserved.
+// Copyright (c) 2024 PaddlePaddle Authors. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,14 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include "paddle/phi/kernels/impl/sequence_expand_kernel_impl.h"
-#include "paddle/phi/kernels/sequence_expand_kernel.h"
+#include "paddle/phi/core/kernel_registry.h"
+#include "paddle/phi/kernels/impl/anchor_generator_kernel_impl.h"
+#include "paddle/phi/kernels/legacy/gpu/anchor_generator_kernel.cu"  //NOLINT
 
-PD_CUSTOM_KERNEL_REGISTER(sequence_expand,
+PD_CUSTOM_KERNEL_REGISTER(anchor_generator,
                           metax_gpu,
                           ALL_LAYOUT,
-                          phi::SequenceExpandKernel,
+                          phi::AnchorGeneratorOpCUDAKernel,
                           float,
-                          double,
-                          int,
-                          int64_t) {}
+                          double) {}
