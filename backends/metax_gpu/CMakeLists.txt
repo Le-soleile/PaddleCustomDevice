@@ -124,6 +124,7 @@ file(
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/funcs/math/*.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/funcs/eigen/*.cu
   # kernels/gpu
+  ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/l1_norm_grad_kernel_register.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/lookup_table_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/lookup_table_grad_kernel.cu
   ${PADDLE_SOURCE_DIR}/paddle/phi/kernels/gpu/l1_norm_grad_kernel.cu
