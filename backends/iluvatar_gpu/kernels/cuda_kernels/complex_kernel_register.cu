@@ -14,6 +14,7 @@
 
 #include "paddle/phi/core/kernel_registry.h"
 #include "paddle/phi/kernels/complex_kernel.h"
+#include "paddle/phi/common/data_type.h"
 
 PD_CUSTOM_KERNEL_REGISTER(conj,
                           iluvatar_gpu,
@@ -34,7 +35,7 @@ PD_CUSTOM_KERNEL_REGISTER(real,
                           phi::RealKernel,
                           phi::dtype::complex<float>,
                           phi::dtype::complex<double>) {
-  kernel->OutputAt(0).SetDataType(phi::dtype::ToReal(kernel_key.dtype()));
+  kernel->OutputAt(0).SetDataType(phi::ToRealType(kernel_key.dtype()));
 }
 
 PD_CUSTOM_KERNEL_REGISTER(imag,
@@ -43,10 +44,10 @@ PD_CUSTOM_KERNEL_REGISTER(imag,
                           phi::ImagKernel,
                           phi::dtype::complex<float>,
                           phi::dtype::complex<double>) {
-  kernel->OutputAt(0).SetDataType(phi::dtype::ToReal(kernel_key.dtype()));
+  kernel->OutputAt(0).SetDataType(phi::ToRealType(kernel_key.dtype()));
 }
 
 PD_CUSTOM_KERNEL_REGISTER(
     complex, iluvatar_gpu, ALL_LAYOUT, phi::ComplexKernel, float, double) {
-  kernel->OutputAt(0).SetDataType(phi::dtype::ToComplex(kernel_key.dtype()));
+  kernel->OutputAt(0).SetDataType(phi::ToComplexType(kernel_key.dtype()));
 }
