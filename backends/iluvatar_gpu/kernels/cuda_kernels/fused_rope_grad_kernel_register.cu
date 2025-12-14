@@ -13,12 +13,12 @@
 // limitations under the License.
 
 #include "paddle/phi/core/kernel_registry.h"
-#include "paddle/phi/kernels/bce_loss_kernel.h"  // NOLINT
+#include "paddle/phi/kernels/fusion/gpu/fused_rope_grad_kernel.cu"  //NOLINT
 
-PD_CUSTOM_KERNEL_REGISTER(bce_loss,
-                          metax_gpu,
+PD_CUSTOM_KERNEL_REGISTER(fused_rotary_position_embedding_grad,
+                          iluvatar_gpu,
                           ALL_LAYOUT,
-                          phi::BCELossKernel,
+                          phi::fusion::FusedRopeGradKernel,
                           float,
-                          double,
-                          phi::dtype::float16) {}
+                          phi::dtype::float16,
+                          phi::dtype::bfloat16){};

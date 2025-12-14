@@ -13,12 +13,11 @@
 // limitations under the License.
 
 #include "paddle/phi/core/kernel_registry.h"
-#include "paddle/phi/kernels/bce_loss_kernel.h"  // NOLINT
+#include "paddle/phi/kernels/legacy/gpu/batched_gemm.h"
 
-PD_CUSTOM_KERNEL_REGISTER(bce_loss,
-                          metax_gpu,
+PD_CUSTOM_KERNEL_REGISTER(batched_gemm,
+                          iluvatar_gpu,
                           ALL_LAYOUT,
-                          phi::BCELossKernel,
+                          phi::BatchedGEMM,
                           float,
-                          double,
-                          phi::dtype::float16) {}
+                          phi::bfloat16) {}
